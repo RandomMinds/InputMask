@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<html>
+<!--
+InputMask - Client side Javascript Form Validation.
+Copyright (C) 2009 by Gregory J Lamoree
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+-->
+
+    <head>
+        <script src='js/InputMask.js' language='javascript' ></script>
+        <link rel="stylesheet" href="css/InputMask.css" type="text/css" />
+    </head>
+    <body>
+    <fieldset>
+    <form action='#' onsubmit='return true;'>
+    <br /><br />
+    <!--
+    Test Field:<input  type='text' name='testField' value='' mask='(999) 999-9999 ext:0000'/>
+    
+    Test Field's Mask: <input type='text' onchange='document.getElementById("testField").setAttribute("mask",this.value); document.getElementById("testField").value="";' value='(999) 999-9999 ext:0000' />
+    <br /><br />
+    -->
+    State: <input type='text' name='statefield' value='' mask='AA' maskname='State' />
+    <br /><br />                       
+    Date (required): <input type='text' name='datefield' value='' mask='[required]90/90/9999' maskname='Date' maskerror='Please enter the date in the following format: mm/dd/yyyy.' />
+    <input type='text' id='count' size='50' value='0' /><br /><br />                       
+    Misc Info (required): <input type='text' name='miscinfo' value='' mask='[required]' maskname='Misc Info' />
+    <br /><br />                       
+    Misc Numeric: <input type='text' name='miscnumeric' value='' mask='[numeric]' maskname='Misc Numeric' />
+    <br /><br />                       
+    Misc Numeric Required: <input type='text' name='miscnumericrequired' value='' mask='[numeric][required]' maskname='Misc Numeric Required' />
+    <br /><br />                       
+    Misc Numeric Min,Max: <input type='text' name='miscminmax' value='' mask='[numeric 10 99999999]' maskname='Misc Numeric Min, Max' />
+    <br /><br />                       
+    Misc Numeric Min,Max Required: <input type='text' name='miscminmaxrequired' value='' mask='[numeric 10 99999999][required]' maskname='Misc Numeric Min, Max Required' />
+    <br /><br />                       
+
+    Misc Alphanumeric: <input type='text' name='miscAlphanumeric' value='' mask='[alphanumeric]' maskname='Misc Alphanumeric' />
+    <br /><br />                       
+    Misc Alphanumeric Required: <input type='text' name='miscAlphanumericrequired' value='' mask='[alphanumeric][required]' maskname='Misc Alphanumeric Required' />
+    <br /><br />                       
+    Misc Alphanumeric Min,Max: <input type='text' name='miscAlphanumericminmax' value='' mask='[alphanumeric 0 30]' maskname='Misc Alphanumeric Min, Max' />
+    <br /><br />                       
+    Misc Alphanumeric Min,Max Required: <input type='text' name='miscAlphanumericminmaxrequired' value='' mask='[alphanumeric 0 40][required]' maskname='Misc Alphanumeric Min, Max Required' />
+    <br /><br />                       
+    
+    Misc Word: <input type='text' name='miscWord' value='' mask='[word]' maskname='Misc Word' />
+    <br /><br />                       
+    Misc Word Required: <input type='text' name='miscWordrequired' value='' mask='[word][required]' maskname='Misc Word Required' />
+    <br /><br />                       
+    Misc Word Min,Max: <input type='text' name='miscWordminmax' value='' mask='[word 0 30]' maskname='Misc Word Min, Max' />
+    <br /><br />                       
+    Misc Word Min,Max Required: <input type='text' name='miscWordminmaxrequired' value='' mask='[word 0 40][required]' maskname='Misc Word Min, Max Required' />
+    <br /><br />                       
+    
+    Misc Character: <input type='text' name='miscCharacter' value='' mask='[character]' maskname='Misc Character' />
+    <br /><br />                       
+    Misc Character Required: <input type='text' name='miscCharacterrequired' value='' mask='[character][required]' maskname='Misc Character Required' />
+    <br /><br />                       
+    Misc Character Min,Max: <input type='text' name='miscCharacterminmax' value='' mask='[character 0 30]' maskname='Misc Character Min, Max' />
+    <br /><br />                       
+    Misc Character Min,Max Required: <input type='text' name='miscCharacterminmaxrequired' value='' mask='[character 2 40][required]' maskname='Misc Character Min, Max Required' />
+    <br /><br />                       
+    <input type='submit'>
+    </form>
+    </fieldset>
+    </body>
+</html>
